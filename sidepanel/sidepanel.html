@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body { font-family: sans-serif; padding: 15px; background-color: #fafafa; }
+    .user-info { font-size: 12px; color: #666; margin-bottom: 15px; border-bottom: 1px solid #ddd; padding-bottom: 5px; }
+    .filter-group { margin-bottom: 10px; }
+    input { width: 100%; padding: 8px; margin-bottom: 5px; box-sizing: border-box; border: 1px solid #dbdbdb; border-radius: 3px; }
+    .btn-add { background: #efefef; color: #262626; border: 1px solid #dbdbdb; padding: 5px; cursor: pointer; width: auto; font-size: 12px; margin-bottom: 10px; }
+    #btn-filter { width: 100%; padding: 10px; cursor: pointer; background: #0095f6; color: white; border: none; border-radius: 8px; font-weight: bold; }
+    ul { list-style: none; padding: 0; margin-top: 20px; }
+    .comment-item { background: white; border: 1px solid #dbdbdb; border-radius: 8px; padding: 10px; margin-bottom: 10px; font-size: 14px; }
+    #inputs-container {
+      max-height: 300px; /* Impede que os 10 campos empurrem tudo para baixo */
+      overflow-y: auto;  /* Cria uma barra de rolagem só nos campos se precisar */
+      padding-right: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="user-info">A filtragem a seguir serve para filtro dos comentários, como também para o dia em que foi comentado, e também o número de curtidas <span id="user-email"> </span></div>
+  
+  <h3>InstaFilter Pro</h3>
+  
+  <div id="inputs-container" class="filter-group">
+    <input type="text" class="filter-input" placeholder="Filtro 1 (ex: preço)">
+  </div>
+  
+  <button id="btn-add-input" class="btn-add">+ Adicionar Filtro</button>
+  
+  <button id="btn-filter">Filtrar agora</button>
+
+  <button id="btn-logout" style="background:none; color:red; border:none; font-size:11px; margin-top:20px; text-decoration:underline; cursor:pointer;">
+        Limpar Filtro(s)
+  </button>
+  
+  <ul id="results-list"></ul>
+
+  <script src="sidepanel.js"></script>
+</body>
+</html>
